@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is to serve as a base for reusable MVP Inclusive React Components.
+
+### Sources used for component creation
+
+- [Inclusive Components](https://inclusive-components.design/)
+
+## Installation
+
+#### `yarn install`
+
+## Run
+
+#### `yarn run storybook`
+
+There is no actual site with this repo. The components are created and inserted into storybook.
+
+## Storybook
+
+Storybook 5 acts as the main UI for this repo. It is set up to run with the following add-ons:
+
+- [Accesibility](https://github.com/storybookjs/storybook/tree/master/addons/a11y)
+- [Viewport](https://github.com/storybookjs/storybook/tree/master/addons/viewport)
+- [Notes](https://github.com/storybookjs/storybook/tree/master/addons/notes)
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -65,4 +89,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->
