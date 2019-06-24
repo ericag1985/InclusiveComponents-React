@@ -1,0 +1,8 @@
+.radiobuttons{
+    display:inline-block;
+    text-align: center;
+}
+
+.radiobuttons label{
+    margin: 5px;
+}
