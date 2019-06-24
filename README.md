@@ -3,6 +3,11 @@ This repo is to serve as a base for reusable MVP Inclusive React Components.
 ### Sources used for component creation
 
 - [Inclusive Components](https://inclusive-components.design/)
+-
+
+### Links to Inclusive Components in Other Languages/Frameworks
+
+-
 
 ## Installation
 
@@ -21,6 +26,25 @@ Storybook 5 acts as the main UI for this repo. It is set up to run with the foll
 - [Accesibility](https://github.com/storybookjs/storybook/tree/master/addons/a11y)
 - [Viewport](https://github.com/storybookjs/storybook/tree/master/addons/viewport)
 - [Notes](https://github.com/storybookjs/storybook/tree/master/addons/notes)
+
+## Components
+
+### Made
+
+-
+
+### Wishlist
+
+- Cards
+- Data Table
+- Notification
+- Content Slider
+- Accordion Section
+- Tabs
+- Tool tips
+- Menus
+- Toggle Buttons
+- Modals
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
