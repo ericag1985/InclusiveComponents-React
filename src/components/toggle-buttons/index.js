@@ -1,7 +1,9 @@
 import React,{useState}from "react";
 
+// radio buttons
 export function RadioButtons(props){
     return (
+        // add aria-pressed
         <fieldset className="radiobuttons">
             <legend>{props.title}</legend>
                 <input type="radio" id="notify-on" name="notify" value="on" checked></input>
@@ -12,6 +14,7 @@ export function RadioButtons(props){
     )
 }
 
+// toggle checkbox checked/unchecked
 export function ToggleCheck(props){
     const [check, setCheck] = useState(false);
     return(
@@ -22,10 +25,9 @@ export function ToggleCheck(props){
     )
 }
 
+// button will toggle as an on/off switch
 export function ToggleSwitch(props){
-
     const [check,setCheck] = useState(false);
-
     return(
         <div className="toggle-switch"> 
             <button role="switch" aria-checked={check}
@@ -33,8 +35,19 @@ export function ToggleSwitch(props){
                 <span>off</span>
                 <span>on</span>
             </button>
-            <label htmlFor="toggle" className="switch">Toggle Switch</label>
+            <label htmlFor="toggle" className="switch">{props.label}</label>
         </div>
     )
     
+}
+
+// button clicked will display a menu
+export const MenuButton = () =>{
+    return(
+        <>
+            <button className="menu-button">
+                Hover over this to display the menu!
+            </button>
+        </>
+    )
 }

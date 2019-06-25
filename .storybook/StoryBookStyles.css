@@ -18,13 +18,14 @@
   color: black;
 }
 
-/* .toggle-switch{
-    display: inline-block;
-} */
+.toggle-switch{
+    padding: 1em;
+}
 
  .toggle-switch button{
     display: inline-block;
     padding: 0;
+    margin: 5px;
     border: none;
     background: transparent;
  } 
@@ -34,11 +35,9 @@
  }
 
 .toggle-switch span{
-    /* margin: 5px; */
     padding: 5px;
     width: 50%;
     font-size: large;
     border: 1px solid black;
-    /* display: inline-block; */
 }
 
