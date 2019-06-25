@@ -1,7 +1,28 @@
 import React,{useState}from "react";
 
-export function RadioButtons(props){
+// basic button 
+export const CTABasic = (props) =>{
+    const [count,setCount] = useState(1);
+    const [pressed,setPressed] = useState(false);
+
+    const ctaPressed = (press)=>{
+        setPressed(!pressed);
+        setCount(count+1)
+        console.log(`You clicked this button ${count} times`)
+    }
+
+    return(
+        <button className="basic-cta" tabindex="0" aria-pressed={pressed} onClick={ctaPressed}>
+            {props.label}
+        </button>
+    )
+}
+
+
+// radio buttons
+export const RadioButtons=(props)=>{
     return (
+        // add aria-pressed
         <fieldset className="radiobuttons">
             <legend>{props.title}</legend>
                 <input type="radio" id="notify-on" name="notify" value="on" checked></input>
@@ -12,7 +33,8 @@ export function RadioButtons(props){
     )
 }
 
-export function ToggleCheck(props){
+// toggle checkbox checked/unchecked
+export const ToggleCheck=(props)=>{
     const [check, setCheck] = useState(false);
     return(
         <label>{props.label}
@@ -22,10 +44,9 @@ export function ToggleCheck(props){
     )
 }
 
-export function ToggleSwitch(props){
-
+// button will toggle as an on/off switch
+export const ToggleSwitch=(props)=>{
     const [check,setCheck] = useState(false);
-
     return(
         <div className="toggle-switch"> 
             <button role="switch" aria-checked={check}
@@ -33,8 +54,22 @@ export function ToggleSwitch(props){
                 <span>off</span>
                 <span>on</span>
             </button>
-            <label htmlFor="toggle" className="switch">Toggle Switch</label>
+            <label htmlFor="toggle" className="switch">{props.label}</label>
         </div>
     )
     
+}
+
+// button clicked will display a menu
+export const MenuButton = (props) =>{
+    return(
+        <>
+            <button id="menubutton"
+            aria-haspopup="true"
+            aria-controls="menu">
+                {props.label}
+            </button>
+            <ul id="menu" aria-labeledby="menubutton"></ul>
+        </>
+    )
 }

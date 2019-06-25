@@ -1,3 +1,40 @@
+html,body{
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.basic-cta{
+    position: relative;
+    border: 1px solid red;
+    padding: 5px;
+    font-size: medium;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.basic-cta:active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 5px;
+    border: 1px solid #f00;
+}
+
+.basic-cta:hover{
+    filter: brightness(70%);
+}
+
+[aria-pressed="true"]:hover{
+    filter: brightness(100%);
+
+}
+
 .radiobuttons{
     display:inline-block;
     text-align: center;
@@ -18,15 +55,18 @@
   color: black;
 }
 
-/* .toggle-switch{
-    display: inline-block;
-} */
+.toggle-switch{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
 
  .toggle-switch button{
-    display: inline-block;
+    display: flex;
     padding: 0;
-    border: none;
+    margin: 5px;
     background: transparent;
+    border: 1px solid black;
  } 
 
  .toggle-switch button:focus{
@@ -34,11 +74,8 @@
  }
 
 .toggle-switch span{
-    /* margin: 5px; */
     padding: 5px;
     width: 50%;
     font-size: large;
-    border: 1px solid black;
-    /* display: inline-block; */
 }
 
