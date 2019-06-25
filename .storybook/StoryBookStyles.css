@@ -24,7 +24,16 @@ html,body{
     right: -5px;
     border-radius: 5px;
     border: 1px solid #f00;
-  }
+}
+
+.basic-cta:hover{
+    filter: brightness(70%);
+}
+
+[aria-pressed="true"]:hover{
+    filter: brightness(100%);
+
+}
 
 .radiobuttons{
     display:inline-block;
