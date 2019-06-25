@@ -44,10 +44,8 @@ export function ToggleSwitch(props){
 // button clicked will display a menu
 export const MenuButton = () =>{
     return(
-        <>
-            <button className="menu-button">
-                Hover over this to display the menu!
-            </button>
-        </>
+        <button className="menu-button">
+            Hover over this to display the menu!
+        </button>
     )
 }
