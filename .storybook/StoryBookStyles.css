@@ -1,6 +1,30 @@
 html,body{
     box-sizing: border-box;
+    padding: 1em;
 }
+
+.basic-cta{
+    position: relative;
+    border: 1px solid red;
+    padding: 5px;
+    font-size: medium;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.basic-cta:active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 5px;
+    border: 1px solid #f00;
+  }
 
 .radiobuttons{
     display:inline-block;

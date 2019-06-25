@@ -1,7 +1,26 @@
 import React,{useState}from "react";
 
+// basic button 
+export const CTABasic = (props) =>{
+    const [count,setCount] = useState(1);
+    const [pressed,setPressed] = useState(false);
+
+    const ctaPressed = (press)=>{
+        setPressed(!pressed);
+        setCount(count+1)
+        console.log(`You clicked this button ${count} times`)
+    }
+
+    return(
+        <button className="basic-cta" tabindex="0" aria-pressed={pressed} onClick={ctaPressed}>
+            {props.label}
+        </button>
+    )
+}
+
+
 // radio buttons
-export function RadioButtons(props){
+export const RadioButtons=(props)=>{
     return (
         // add aria-pressed
         <fieldset className="radiobuttons">
@@ -15,7 +34,7 @@ export function RadioButtons(props){
 }
 
 // toggle checkbox checked/unchecked
-export function ToggleCheck(props){
+export const ToggleCheck=(props)=>{
     const [check, setCheck] = useState(false);
     return(
         <label>{props.label}
@@ -26,7 +45,7 @@ export function ToggleCheck(props){
 }
 
 // button will toggle as an on/off switch
-export function ToggleSwitch(props){
+export const ToggleSwitch=(props)=>{
     const [check,setCheck] = useState(false);
     return(
         <div className="toggle-switch"> 
@@ -42,10 +61,15 @@ export function ToggleSwitch(props){
 }
 
 // button clicked will display a menu
-export const MenuButton = () =>{
+export const MenuButton = (props) =>{
     return(
-        <button className="menu-button">
-            Hover over this to display the menu!
-        </button>
+        <>
+            <button id="menubutton"
+            aria-haspopup="true"
+            aria-controls="menu">
+                {props.label}
+            </button>
+            <ul id="menu" aria-labeledby="menubutton"></ul>
+        </>
     )
 }
