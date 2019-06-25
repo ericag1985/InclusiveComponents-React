@@ -23,12 +23,18 @@ export function ToggleCheck(props){
 }
 
 export function ToggleSwitch(props){
+
+    const [check,setCheck] = useState(false);
+
     return(
-        <label className="switch">
-            {props.label}
-            {/* <input type="checkbox"></input> */}
-            <span className="switch"></span>
-        </label>
+        <div className="toggle-switch"> 
+            <button role="switch" aria-checked={check}
+                id="toggle" className="switch" tabIndex="0" onClick={()=>setCheck(!check)}>
+                <span>off</span>
+                <span>on</span>
+            </button>
+            <label htmlFor="toggle" className="switch">Toggle Switch</label>
+        </div>
     )
     
 }

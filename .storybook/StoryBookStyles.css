@@ -6,3 +6,39 @@
 .radiobuttons label{
     margin: 5px;
 }
+
+[role="switch"][aria-checked="false"] :first-child,
+[role="switch"][aria-checked="true"] :last-child {
+  background: red;
+  color: black;
+}
+
+[role="switch"][aria-checked="false"] :last-child,
+[role="switch"][aria-checked="true"] :first-child {
+  color: black;
+}
+
+/* .toggle-switch{
+    display: inline-block;
+} */
+
+ .toggle-switch button{
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: transparent;
+ } 
+
+ .toggle-switch button:focus{
+     outline: none;
+ }
+
+.toggle-switch span{
+    /* margin: 5px; */
+    padding: 5px;
+    width: 50%;
+    font-size: large;
+    border: 1px solid black;
+    /* display: inline-block; */
+}
+
