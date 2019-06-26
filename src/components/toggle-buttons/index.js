@@ -6,7 +6,7 @@ export const CTABasic = (props) =>{
     const [pressed,setPressed] = useState(false);
 
     const ctaPressed = (press)=>{
-        setPressed(!pressed);
+        setPressed(!pressed)
         setCount(count+1)
         console.log(`You clicked this button ${count} times`)
     }
