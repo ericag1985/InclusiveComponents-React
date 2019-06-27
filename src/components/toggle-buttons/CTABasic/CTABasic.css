@@ -1,0 +1,38 @@
+html,body{
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.basic-cta{
+    position: relative;
+    border: 1px solid red;
+    padding: 5px;
+    font-size: medium;
+    background: red;
+    color: black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.basic-cta:active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 5px;
+    border: 1px solid #f00;
+}
+
+.basic-cta:hover{
+    filter: brightness(70%);
+}
+
+[aria-pressed="true"]{
+    border-color: hsl(0, 6%, 53%);
+    background-color: hsl(0, 82%, 31%);
+    background-image: linear-gradient(to bottom, hsl(0, 82%, 53%), hsl(0, 82%, 47%));
+    box-shadow: inset 0 3px 5px 1px hsl(0, 83%, 30%);
+}

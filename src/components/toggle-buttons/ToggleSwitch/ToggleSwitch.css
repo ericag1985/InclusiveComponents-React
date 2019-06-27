@@ -1,0 +1,34 @@
+[role="switch"][aria-checked="false"] :first-child,
+[role="switch"][aria-checked="true"] :last-child {
+  background: red;
+  color: black;
+}
+
+[role="switch"][aria-checked="false"] :last-child,
+[role="switch"][aria-checked="true"] :first-child {
+  color: black;
+}
+
+.toggle-switch{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+ .toggle-switch button{
+    display: flex;
+    padding: 0;
+    margin: 5px;
+    background: transparent;
+    border: 1px solid black;
+ } 
+
+ .toggle-switch button:focus{
+     outline: none;
+ }
+
+.toggle-switch span{
+    padding: 5px;
+    width: 50%;
+    font-size: large;
+}

@@ -87,41 +87,41 @@ html,body{
     display: inline-block;
 }
 
-.menu-button span{
+.menu-button__label{
     padding: 10px;
     border: 1px solid black;
 }
 
-.menu{
+.sub-menu{
     display: none;
     margin: 0;
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
-.menu li{
+.sub-menu__item{
     padding: 5px;
 }
 
-.menu li:hover{
+.sub-menu__item:hover{
     background: #f6f6f6;
 }
 
-.menu li a{
+.sub-menu__item-link{
     text-decoration: none;
     color: black;
 }
 
-.menu-button:hover .menu,
-.menu-button:focus .menu
+.menu-button:hover .sub-menu,
+.menu-button:focus .sub-menu
 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 11px;
-
 }
 
-.menu-button:hover span,.menu-button:focus span{
+.menu-button:hover .menu-button__label,
+.menu-button:focus .menu-button__label{
     background:#f6f6f6;
 }
