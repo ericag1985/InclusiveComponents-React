@@ -1,6 +1,11 @@
 import React from "react";
-import {RadioButtons,ToggleCheck,ToggleSwitch,MenuButton,CTABasic} from "./index"
+import {CTABasic} from "./CTABasic/index"
+import {RadioButtons} from "./RadioButtons/index"
+import {ToggleCheck} from "./ToggleCheck/index"
+import {ToggleSwitch} from "./ToggleSwitch/index"
+import {MenuButton} from "./MenuButton/index"
 import { storiesOf } from "@storybook/react";
+import './CTABasic/CTABasic.css'
 
 storiesOf("Toggle Buttons", module)
 .add("Basic CTA",()=><CTABasic label="Click me!"></CTABasic>)

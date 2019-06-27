@@ -12,7 +12,7 @@ export const CTABasic = (props) =>{
     }
 
     return(
-        <button className="basic-cta" tabindex="0" aria-pressed={pressed} onClick={ctaPressed}>
+        <button aria-label={props.label} className="basic-cta" tabindex="0" aria-pressed={pressed} onClick={ctaPressed}>
             {props.label}
         </button>
     )
@@ -64,12 +64,22 @@ export const ToggleSwitch=(props)=>{
 export const MenuButton = (props) =>{
     return(
         <>
-            <button id="menubutton"
+            <li role="button" className="menu-button" id="menubutton"
+            aria-expanded="false"
             aria-haspopup="true"
-            aria-controls="menu">
-                {props.label}
-            </button>
-            <ul id="menu" aria-labeledby="menubutton"></ul>
+            aria-controls="menu"
+            >
+                <span tabIndex="0" className="menu-button__label">{props.label}</span>
+                <ul className="sub-menu"id="menu" aria-labelledby="menubutton">
+                    <li tabIndex="1" className="sub-menu__item"><a className="sub-menu__item-link" href="...">This is option 1.</a></li>
+                    <li tabIndex="2" className="sub-menu__item"><a className="sub-menu__item-link" href="...">This is option 2.</a></li>
+                    <li tabIndex="3" className="sub-menu__item"><a className="sub-menu__item-link" href="...">This is option 3.</a></li>
+                    <li tabIndex="4" className="sub-menu__item"><a className="sub-menu__item-link" href="...">This is option 4.</a></li>
+                </ul>
+            </li>
+            <div>
+                
+            </div>
         </>
     )
 }
