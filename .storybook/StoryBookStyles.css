@@ -32,9 +32,9 @@ html,body{
 
 [aria-pressed="true"]{
     border-color: hsl(0, 6%, 53%);
-  background-color: hsl(0, 82%, 31%);
-  background-image: linear-gradient(to bottom, hsl(0, 82%, 53%), hsl(0, 82%, 47%));
-  box-shadow: inset 0 3px 5px 1px hsl(0, 83%, 30%);
+    background-color: hsl(0, 82%, 31%);
+    background-image: linear-gradient(to bottom, hsl(0, 82%, 53%), hsl(0, 82%, 47%));
+    box-shadow: inset 0 3px 5px 1px hsl(0, 83%, 30%);
 }
 
 .radiobuttons{
@@ -81,3 +81,47 @@ html,body{
     font-size: large;
 }
 
+.menu-button{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+.menu-button span{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.menu{
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding: 0px;
+}
+
+.menu li{
+    padding: 5px;
+}
+
+.menu li:hover{
+    background: #f6f6f6;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-button:hover .menu,
+.menu-button:focus .menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 11px;
+
+}
+
+.menu-button:hover span,.menu-button:focus span{
+    background:#f6f6f6;
+}
