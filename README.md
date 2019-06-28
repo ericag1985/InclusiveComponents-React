@@ -45,6 +45,7 @@ Storybook 5 acts as the main UI for this repo. It is set up to run with the foll
 - Menus
 - Toggle Buttons
 - Modals
+- Form Inputs
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
