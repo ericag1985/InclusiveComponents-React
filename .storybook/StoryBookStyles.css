@@ -1,0 +1,127 @@
+html,body{
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.basic-cta{
+    position: relative;
+    border: 1px solid red;
+    padding: 5px;
+    font-size: medium;
+    background: red;
+    color: black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.basic-cta:active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 5px;
+    border: 1px solid #f00;
+}
+
+.basic-cta:hover{
+    filter: brightness(70%);
+}
+
+[aria-pressed="true"]{
+    border-color: hsl(0, 6%, 53%);
+    background-color: hsl(0, 82%, 31%);
+    background-image: linear-gradient(to bottom, hsl(0, 82%, 53%), hsl(0, 82%, 47%));
+    box-shadow: inset 0 3px 5px 1px hsl(0, 83%, 30%);
+}
+
+.radiobuttons{
+    display:inline-block;
+    text-align: center;
+}
+
+.radiobuttons label{
+    margin: 5px;
+}
+
+[role="switch"][aria-checked="false"] :first-child,
+[role="switch"][aria-checked="true"] :last-child {
+  background: red;
+  color: black;
+}
+
+[role="switch"][aria-checked="false"] :last-child,
+[role="switch"][aria-checked="true"] :first-child {
+  color: black;
+}
+
+.toggle-switch{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+ .toggle-switch button{
+    display: flex;
+    padding: 0;
+    margin: 5px;
+    background: transparent;
+    border: 1px solid black;
+ } 
+
+ .toggle-switch button:focus{
+     outline: none;
+ }
+
+.toggle-switch span{
+    padding: 5px;
+    width: 50%;
+    font-size: large;
+}
+
+.menu-button{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+.menu-button__label{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.sub-menu{
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.sub-menu__item{
+    padding: 5px;
+}
+
+.sub-menu__item:hover{
+    background: #f6f6f6;
+}
+
+.sub-menu__item-link{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-button:hover .sub-menu,
+.menu-button:focus .sub-menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+.menu-button:hover .menu-button__label,
+.menu-button:focus .menu-button__label{
+    background:#f6f6f6;
+}
